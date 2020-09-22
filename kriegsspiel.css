@@ -1,0 +1,95 @@
+:root {
+	--light: white;
+	--dark: black;
+	--a: #0000EE;
+	--b: #551A8B;
+	--selected: #FF0000;
+}
+/* player colors */
+.A {
+	color: var(--a);
+}
+.B {
+	color: var(--b);
+}
+/* container */
+#kriegsspiel {
+	grid-column: 1 / -1;
+}
+/* metaLayer */
+#metaLayer {
+	z-index: 5;
+}
+#coordLabels>* {
+	fill: var(--light);
+	mix-blend-mode: difference;
+}
+#divisorLines {
+	z-index: 4;
+}
+#divisorLines>* {
+	stroke: currentColor;
+	stroke-width: 1;
+}
+/* unitLayer */
+#unitLayer {
+	z-index: 3;
+}
+.unit>* {
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+}
+.selected {
+	color: var(--selected)!important;
+}
+.hidden {
+	stroke-width: 0;
+	stroke: none;
+	fill: none;
+}
+.stat {
+	stroke: none;
+	fill: currentColor;
+}
+/* commLayer */
+#commLayer {
+	z-index: 2;
+}
+#commLayer>* {
+	fill: currentColor;
+	opacity: 0.5;
+}
+/* featureLayer */
+#featureLayer {
+	z-index: 1;
+	opacity: 0.1;
+}
+.feature {
+	color: var(--light);
+}
+.feature:nth-child(odd) {
+	color: var(--dark);
+}
+.baseSquare {
+	fill: currentColor;
+}
+.fort, .mountainPass, .mountain {
+	fill: none;
+	color: var(--light);
+	stroke: currentColor;
+	stroke-width: 3;
+	mix-blend-mode: difference;
+}
+.A .arsenal {
+	color: var(--a);
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+}
+.B .arsenal {
+	color: var(--b);
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+}
